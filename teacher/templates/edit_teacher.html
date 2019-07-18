@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>djangoforms</title>
+	<style type="text/css">
+	
+	.mac {
+		border: 5px solid;
+		width: 700px;
+		font-family: helvetica;
+		border-width: 40px;
+		color: purple;
+		/*background-color: grey;*/
+		max-width: 400px;
+		margin: 10% auto;
+		min-height: 300px;
+		background-color: rgba(255,255,255,0.4);
+		/*background-image:bc.jpg;*/
+		padding: 30px;
+		margin: 5px;
+		border-radius: 10px;
+		box-shadow: 0 3px 46px rgba(0,0,0,0.5);
+		/*border-radius: 5px;
+		width: 328px;
+		height: 35px;
+		display: block;
+		text-indent: 10px;
+		border: 1px solid #ccc; */
+	}	
+	.mac{
+	font-family: helvetica;
+		border-width: 40px;
+		color: blue;
+	}	
+
+	.rim2{
+
+	}
+	</style>
+</head>
+
+<body>
+	<div class = "mac">
+		<h2>Teacher Registration</h2>
+	
+	<div class = "rim">
+		<form method="POST">
+	</div>
+
+	<div class = "rim2">
+		{{form.as_p}}
+		<input type="submit">save</input>
+		{%csrf_token%}
+	</div>
+</form>
+
+</div>
+
+
+</body>
+</html>

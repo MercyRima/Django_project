@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Registration</th>
+			<th>proffesion</th>
+		
+		{%for teacher in teachers%}
+		<tr>
+			<td>{{teacher.first_name}}</td>
+			<td>{{teacher.last_name}}</td>
+			<td>{{teacher.registration_number}}</td>
+			<td>{{teacher.proffesion}}</td>
+
+			</tr>
+			{%endfor %}
+
+			
+	</table>
+
+</body>
+</html>
