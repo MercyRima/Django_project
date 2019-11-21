@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import Teacher
 from .models import Teacher
 from django.shortcuts import redirect
+from django.http import HttpResponseBadRequest
+
 
 
 # Create your views here.
@@ -13,7 +15,9 @@ def add_teacher(request):
         form = TeacherForm (request.POST)
         if form.is_valid():
             form.save()
-        return redirect("list_teachers")
+        else:
+            return HttpResponseBadRequest()
+        # return redirect("list_teachers")
     else:
         form = TeacherForm()
     return render (request,"add_teacher.html",{"form":form})
